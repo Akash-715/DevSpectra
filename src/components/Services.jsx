@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import "../Styles/services.css";
 
 const services = [
@@ -29,7 +28,6 @@ const services = [
 ];
 
 export default function ShuffleCards({ onCardClick }) {
-  const sectionRefs = useRef({});
 
   const handleClick = (id) => {
     if (onCardClick) {
@@ -38,27 +36,40 @@ export default function ShuffleCards({ onCardClick }) {
   };
 
   return (
-    <div className="shuffle-wrapper">
+    <section className="shuffle-section">
 
-      <div className="shuffle-row">
-        {services.map((service, index) => (
-          <div
-            key={service.id}
-            className="shuffle-card"
-            style={{
-              transform: `rotate(-12deg) translateX(${index * -40}px)`
-            }}
-            onClick={() => handleClick(service.id)}
-          >
-            <img src={service.image} alt={service.title} />
-
-            <div className="shuffle-title">
-              {service.title}
-            </div>
-          </div>
-        ))}
+      {/* SECTION TEXT */}
+      <div className="shuffle-header">
+        <p className="shuffle-eyebrow">OUR SERVICES</p>
+        <h2>Services We Provide</h2>
+        <p>
+          We design, develop and scale modern digital products tailored for
+          startups, growing businesses and ambitious brands.
+        </p>
       </div>
 
-    </div>
+      {/* CARDS */}
+      <div className="shuffle-wrapper">
+        <div className="shuffle-row">
+          {services.map((service, index) => (
+            <div
+              key={service.id}
+              className="shuffle-card"
+              style={{
+                transform: `rotate(-12deg) translateX(${index * -40}px)`
+              }}
+              onClick={() => handleClick(service.id)}
+            >
+              <img src={service.image} alt={service.title} />
+
+              <div className="shuffle-title">
+                {service.title}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </section>
   );
 }

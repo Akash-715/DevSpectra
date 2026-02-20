@@ -1,18 +1,57 @@
+/* SECTION WRAPPER */
+
+.shuffle-section {
+  padding: 140px 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.05), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(249, 115, 22, 0.05), transparent 40%);
+}
+
+/* HEADER */
+
+.shuffle-header {
+  text-align: center;
+  margin-bottom: 100px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shuffle-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #2563eb;
+}
+
+.shuffle-header h2 {
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.shuffle-header p {
+  margin-top: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CARDS WRAPPER */
+
 .shuffle-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 120px 0;
 }
 
-/* STACKED ROW */
+/* STACK ROW */
 
 .shuffle-row {
   display: flex;
   position: relative;
 }
 
-/* LARGE CARDS */
+/* CARD */
 
 .shuffle-card {
   width: 380px;
@@ -33,7 +72,7 @@
   margin-left: 0;
 }
 
-/* FULL IMAGE */
+/* IMAGE FULL BLEED */
 
 .shuffle-card img {
   position: absolute;
@@ -42,11 +81,10 @@
 
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
-/* BOTTOM WHITE PANEL */
+/* TITLE STRIP */
 
 .shuffle-title {
   position: absolute;
@@ -65,7 +103,7 @@
   color: #1a1a1a;
 }
 
-/* HOVER STRAIGHTEN */
+/* HOVER */
 
 .shuffle-card:hover {
   transform: rotate(0deg) translateY(-25px) scale(1.05) !important;
